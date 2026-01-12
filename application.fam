@@ -1,0 +1,13 @@
+App(
+    appid="flipdoctor",
+    name="Flip Doctor",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="flip_doctor_app",
+    stack_size=1 * 1024,
+    fap_category="Examples",
+    fap_version=(1, 0),
+    fap_icon="flipdoctor.png",  # 10x10 1-bit PNG
+    fap_description="Flip Doctor puzzle game",
+    fap_author="pydevcs",
+    sources=["flip_doctor.c"],
+)
