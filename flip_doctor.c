@@ -67,6 +67,7 @@ typedef struct {
     Wall wall;
 } GameState;
 
+/*
 static const NotificationSequence sequence_level_completed = {    
     &message_vibro_on,
     &message_delay_10,
@@ -96,6 +97,7 @@ static const NotificationSequence sequence_level_completed = {
     &message_blue_0,
     NULL,
 };
+*/
 
 static const NotificationSequence sequence_snap = {    
     &message_vibro_on,
@@ -266,7 +268,7 @@ static void draw_callback(Canvas* canvas, void* ctx) {
         canvas_draw_str_aligned(canvas, 64, 24, AlignCenter, AlignCenter, "LEVEL COMPLETE");
         canvas_set_font(canvas, FontSecondary);
         canvas_draw_str_aligned(canvas, 64, 40, AlignCenter, AlignCenter, time_str);
-        notification_message(notifications, &sequence_level_completed);
+        //notification_message(notifications, &sequence_level_completed);
     } else if(game.lost) {
         canvas_set_font(canvas, FontPrimary);
         canvas_draw_str_aligned(canvas, 64, 32, AlignCenter, AlignCenter, "FAIL - TRY AGAIN");
